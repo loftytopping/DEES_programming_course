@@ -47,7 +47,7 @@ Most of the large University clusters will allow you to run the provided noteboo
 
 **Important note for the 2020 course in Humanities cluster**: We have been allocated a cluster with a specific environment which will require you to use the following command, in the anaconda prompt, to run our jupyter notebooks.
 
-> jupyter-notebook --notebook-dir .\ --NotebookApp.token='' --NotebookApp.password=``
+> jupyter-notebook --notebook-dir .\ --NotebookApp.token='' --NotebookApp.password=''
 
 
 Please note you might find it easier to issue this command in the directory where you have cloned this repository, but you should be able to navigate to find them. Once you issue this command you should find a web browser takes you to the default home page which will look like the following figure:
