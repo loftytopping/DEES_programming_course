@@ -21,7 +21,7 @@ This course has been developed with the notion that learning Python is most effe
 
 First, you will need to clone this repository into a local folder. Create a folder on your machine, and then run the following command from a command prompt:
 
-git clone. xxx
+git clone https://github.com/loftytopping/DEES_programming_course.git
 
 ## Dependencies and running examples <a name="Dependencies"></a>
 
