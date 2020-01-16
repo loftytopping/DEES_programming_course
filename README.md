@@ -17,7 +17,7 @@ Please check the project wiki page for more information on updates and planned r
 
 ## Course overview<a name="Course-overview"></a>
 
-This course has been developed with the notion that learning Python is best when provided with domain relevant examples. However it is also important to cover some basic/fundamental operations. In each notebook you will find a narrative that matches each weekly lecture, whilst also walking you through a series of exercises that not only reaffirm the new skills being developed, but serve as a reference point for further practicals as we move through the course.
+This course has been developed with the notion that learning Python is most effective when provided with domain relevant examples. However, it is also important to cover some basic/fundamental operations. In each notebook you will find a narrative that matches each weekly lecture, whilst also walking you through a series of exercises that not only reaffirm the new skills being developed, but serve as a reference point for further practicals as we move through the course.
 
 First, you will need to clone this repository into a local folder. Create a folder on your machine, and then run the following command from a command prompt:
 
