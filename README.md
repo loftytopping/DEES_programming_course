@@ -45,10 +45,13 @@ Most of the large University clusters will allow you to run the provided noteboo
 
 > jupyter notebook
 
-**Important note for the 2020 course in Humanities cluster**: We have been allocated a cluster with a specific environment which will require you to use the following command, in the anaconda prompt, to run our jupyter notebooks.
+This should ideally be run in the same directory your notebook files are.
+
+**Important note for the 2020 course**: We have been allocated a cluster with a specific environment which will require you to use the following command, **in the Anaconda prompt**, to run our jupyter notebooks.
 
 > jupyter-notebook --notebook-dir .\ --NotebookApp.token='' --NotebookApp.password=''
 
+You can find the Anaconda prompt in the menu of applications in Windows. You will also need to make sure you clone this repository into your P:\ drive if you want to keep working on modified files in-between sessions. If not, you will have to re-clone this repository everytime. To access your P:\ drive you simply need to type P:\ in the command prompt. We will show you in class how to clone to your P:\ drive.
 
 Please note you might find it easier to issue this command in the directory where you have cloned this repository, but you should be able to navigate to find them. Once you issue this command you should find a web browser takes you to the default home page which will look like the following figure:
 
