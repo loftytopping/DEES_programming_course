@@ -4,6 +4,8 @@ This repository contains a series of [Jupyter](https://jupyter.org) notebooks de
 
 [![DOI](https://zenodo.org/badge/233927415.svg)](https://zenodo.org/badge/latestdoi/233927415)
 
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/loftytopping/DEES_programming_course/master)
+
 <img src="images/Introduction.png" width="800"/>
 
 Please check the project wiki page for more information on updates and planned releases should you wish to follow this repository outside of the University module. This project is licensed under the terms of the Creative Commons (CC) License v3.0, as provided with this repository. 
