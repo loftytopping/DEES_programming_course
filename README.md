@@ -4,7 +4,7 @@ This repository contains a series of [Jupyter](https://jupyter.org) notebooks de
 
 [![DOI](https://zenodo.org/badge/233927415.svg)](https://zenodo.org/badge/latestdoi/233927415)
 
-Do you want/need to run this course without having to rely on a local machine or cluster? If so please use the following Binder link. Otherwise, please read the rest of this page. For those who want to use Binder, you can click on the Binder link below and this will create an interactive session for you. Please note if you want to save your work during this session you will need to download the relevant notebook file. Everytime this repository changes Binder will also need to re-build an image so it may take longer than usual to load. 
+Do you want/need to run this course without having to rely on a local machine or cluster? If so please use the following Binder link. Otherwise, please read the rest of this page and find the installation instructions via the table of contents below. For those who want to use Binder, you can click on the Binder link below and this will create an interactive session for you. Please note if you want to save your work during this session you will need to download the relevant notebook file. Everytime this repository changes Binder will also need to re-build an image so it may take longer than usual to load. 
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/loftytopping/DEES_programming_course/master)
 
