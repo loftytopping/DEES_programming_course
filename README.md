@@ -76,27 +76,30 @@ If you do not, or cannot, run Python from your own machine we have provided the 
 
 Google's Colab [Co-laboratory](https://colab.research.google.com) is a great platform for developing machine learning and data-science driven applications on the web. It provides access to free GPU resource (Graphics Processing Units). However it also allows us to run Jupyter notebooks from a Github repository *if you have a Google account*. If you can register or have an existing Google account, using Google Colab is a really nice experience. It will allow you to save individual files and projects to your Google Drive. We dont cover that here. By clicking on the above link it will take you to a page that presents you with options to load existing files from either your Google Drive or from public repositories. However we can also provide you with a clickable link for running individual notebook files, much like Binder. These are given below and are linked to each notebook file. You will likely find these load much quicker than using Binder. However, you may find any images used in the notebook file that are in the Github repo do not load..but not a huge problem. The links to current notebook files are given below:
 
-#### Practical 1 - From size distributions to PM2.5
-- [![Open notebook In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/loftytopping/Aerosol_CDT_modelling/blob/master/Practical_1.ipynb)
-  - Solution notebook: [![Open notebook In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/loftytopping/Aerosol_CDT_modelling/blob/master/solutions/Practical_1.ipynb)
-#### Practical 2 - Equilibrium Absorptive Partitioning
-- [![Open notebook In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/loftytopping/Aerosol_CDT_modelling/blob/master/Practical_2.ipynb)
-  - Solution notebook: [![Open notebook In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/loftytopping/Aerosol_CDT_modelling/blob/master/solutions/Practical_2.ipynb)
-#### Practical 3 - The Droplet Growth Equation
-- [![Open notebook In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/loftytopping/Aerosol_CDT_modelling/blob/master/Practical_3.ipynb)
-  - Solution notebook: [![Open notebook In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/loftytopping/Aerosol_CDT_modelling/blob/master/solutions/Practical_3.ipynb)
-#### Practical 4 - The Droplet growth equation with a size distribution
-- [![Open notebook In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/loftytopping/Aerosol_CDT_modelling/blob/master/Practical_4.ipynb)
-  - Solution notebook: [![Open notebook In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/loftytopping/Aerosol_CDT_modelling/blob/master/solutions/Practical_4.ipynb)
-#### Practical 5 - Pandas and geospatial data (Visualising PM2.5 data)
-- [![Open notebook In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/loftytopping/Aerosol_CDT_modelling/blob/master/Practical_5.ipynb)
-  - Solution notebook: [![Open notebook In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/loftytopping/Aerosol_CDT_modelling/blob/master/solutions/Practical_5.ipynb)
-#### Practical 6 - Pandas_data_discovery - Time series and generating statistics of PM data
-- [![Open notebook In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/loftytopping/Aerosol_CDT_modelling/blob/master/Practical_6.ipynb)
-  - Solution notebook: [![Open notebook In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/loftytopping/Aerosol_CDT_modelling/blob/master/solutions/Practical_6.ipynb)
-#### Practical 7 - Pandas data discovery - Cluster analysis
-- [![Open notebook In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/loftytopping/Aerosol_CDT_modelling/blob/master/Practical_7.ipynb)
-  - Solution notebook: [![Open notebook In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/loftytopping/Aerosol_CDT_modelling/blob/master/solutions/Practical_7.ipynb)
+#### Practical 1 
+- [![Open notebook In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/loftytopping/DEES_programming_course/blob/master/Practical_1.ipynb)
+  - Solution notebook: [![Open notebook In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/loftytopping/DEES_programming_course/blob/master/solutions/Practical_1.ipynb)
+#### Practical 2 
+- [![Open notebook In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/loftytopping/DEES_programming_course/blob/master/Practical_2.ipynb)
+  - Solution notebook: [![Open notebook In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/loftytopping/DEES_programming_course/blob/master/solutions/Practical_2.ipynb)
+#### Practical 3 
+- [![Open notebook In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/loftytopping/DEES_programming_course/blob/master/Practical_3.ipynb)
+  - Solution notebook: [![Open notebook In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/loftytopping/DEES_programming_course/blob/master/solutions/Practical_3.ipynb)
+#### Practical 4 
+- [![Open notebook In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/loftytopping/DEES_programming_course/blob/master/Practical_4.ipynb)
+  - Solution notebook: [![Open notebook In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/loftytopping/DEES_programming_course/blob/master/solutions/Practical_4.ipynb)
+#### Practical 5 
+- [![Open notebook In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/loftytopping/DEES_programming_course/blob/master/Practical_5.ipynb)
+  - Solution notebook: [![Open notebook In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/loftytopping/DEES_programming_course/blob/master/solutions/Practical_5.ipynb)
+#### Practical 6 
+- [![Open notebook In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/loftytopping/DEES_programming_course/blob/master/Practical_6.ipynb)
+  - Solution notebook: [![Open notebook In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/loftytopping/DEES_programming_course/blob/master/solutions/Practical_6.ipynb)
+#### Practical 7 
+- [![Open notebook In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/loftytopping/DEES_programming_course/blob/master/Practical_7.ipynb)
+  - Solution notebook: [![Open notebook In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/loftytopping/DEES_programming_course/blob/master/solutions/Practical_7.ipynb)
+#### Practical 8
+- [![Open notebook In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/loftytopping/DEES_programming_course/blob/master/Practical_8.ipynb)
+  - Solution notebook: [![Open notebook In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/loftytopping/DEES_programming_course/blob/master/solutions/Practical_8.ipynb)
 
 ## Repository structure and using Jupyter notebooks <a name="Folder-Structure"></a>
 
@@ -108,7 +111,7 @@ Google's Colab [Co-laboratory](https://colab.research.google.com) is a great pla
     ├── solutions               # Contains the same notebooks as in our root folder but with solutions
     |------ data                  # Data used in solutions notebooks
     |------ images                # images used in solutions notebooks
-    ├── Practical 1. Introduction to data types and numerical operations.ipynb         # Individual notebook practicals
+    ├── Practical 1.            # Individual notebook practicals
     ├── Practical 2. ....
     ├── LICENSE
     └── README.md
