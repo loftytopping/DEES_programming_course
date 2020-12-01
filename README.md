@@ -100,6 +100,17 @@ Google's Colab [Co-laboratory](https://colab.research.google.com) is a great pla
 #### Practical 8
 - [![Open notebook In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/loftytopping/DEES_programming_course/blob/master/Practical_8.ipynb)
   - Solution notebook: [![Open notebook In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/loftytopping/DEES_programming_course/blob/master/solutions/Practical_8.ipynb)
+  
+#### Assessment option 1
+- [![Open notebook In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/loftytopping/DEES_programming_course/blob/master/assessments/Option_1.ipynb)
+#### Assessment option 2
+- [![Open notebook In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/loftytopping/DEES_programming_course/blob/master/assessments/Option_2.ipynb)
+#### Assessment option 3
+- [![Open notebook In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/loftytopping/DEES_programming_course/blob/master/assessments/Option_3.ipynb)
+#### Assessment option 4
+- [![Open notebook In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/loftytopping/DEES_programming_course/blob/master/assessments/Option_4.ipynb)
+#### Assessment option 5
+- [![Open notebook In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/loftytopping/DEES_programming_course/blob/master/assessments/Option_5.ipynb)
 
 ## Repository structure and using Jupyter notebooks <a name="Folder-Structure"></a>
 
