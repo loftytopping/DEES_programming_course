@@ -1,0 +1,10 @@
+name: DEES_programming
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - cartopy
+  - pandas
+  - scikit-learn
+  - jupyter
+prefix: C:\Users\Dave\anaconda3\envs\DEES_programming
