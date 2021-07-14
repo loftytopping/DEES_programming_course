@@ -1,6 +1,6 @@
 # DEES_Python_course
 
-This repository contains a series of [Jupyter](https://jupyter.org) notebooks designed to practice developing and applying Python across challanges in the Earth Sciences. There are so many courses now available to pick up core operations in Python, this course is targetted more at diving straight in and providing templates for common operations. 
+This repository contains a series of [Jupyter](https://jupyter.org) notebooks designed to practice developing and applying Python across challenges in the Earth Sciences. There are so many courses now available to pick up core operations in Python, this course is targetted more at diving straight in and providing templates for common operations. 
 
 [![DOI](https://zenodo.org/badge/233927415.svg)](https://zenodo.org/badge/latestdoi/233927415)
 
