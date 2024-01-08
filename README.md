@@ -29,7 +29,7 @@ If you have not used a Jupyter notebook before, I would reccomend checking out t
 
 ### 2(a). Using the University Jupyter-hub **(recommended for UoM students)**<a name="UoMhub"></a>
 
-If you are a student at the University of Manchester, we will provide you with login details for our Jupyter-hub. You will find these details on the Blackboard page of our course. This includes instructions on how to download all of the course material and install a few packages before we dive in!
+If you are a student at the University of Manchester, we will show you how to run this course on a University cluster. You will find these details on the Blackboard page of our course. This includes instructions on how to download all of the course material and install a few packages before we dive in.
 
 ### 2(b). Using your own machine<a name="own"></a>
 
@@ -55,7 +55,7 @@ You will see a number of packages being downloaded by the conda package manager 
 
     To activate this environment, use
     
-        $ conda activate DEES_programming_env
+        $ conda activate DEES_python
     
     To deactivate an active environment, use
     
@@ -63,7 +63,7 @@ You will see a number of packages being downloaded by the conda package manager 
         
 These are the commands for switching on/off this new virtual environment. Let's switch it on. Type the following in the command prompt/terminal:
 
-> conda activate DEES_programming_env
+> conda activate DEES_python
 
 In the command prompt, you will see the name (DEES_programming_env) replace (base). Now we can start an interactive Jupyer notebook session. Still within the project folder, type the following:
 
@@ -79,43 +79,9 @@ If you do not, or cannot, run Python from your own machine we have provided the 
 
 ### 2(d). Using Google Colab<a name="Colab"></a>
 
-Google's Colab [Co-laboratory](https://colab.research.google.com) is a great platform for developing machine learning and data-science driven applications on the web. It provides access to free GPU resource (Graphics Processing Units). However it also allows us to run Jupyter notebooks from a Github repository *if you have a Google account*. If you can register or have an existing Google account, using Google Colab is a really nice experience. It will allow you to save individual files and projects to your Google Drive. We dont cover that here. By clicking on the above link it will take you to a page that presents you with options to load existing files from either your Google Drive or from public repositories. However we can also provide you with a clickable link for running individual notebook files, much like Binder. These are given below and are linked to each notebook file. You will likely find these load much quicker than using Binder. However, you may find any images used in the notebook file that are in the Github repo do not load..but not a huge problem. The links to current notebook files are given below. Please note that if you decide to try and run the assessment options in Google Colab you will need to replicate the steps to install Cartopy [if needed] and also load the relevant data files specifically for Colab. Search for those commands in the practical notebooks and ask if you have any questions:
+Google's Colab [Co-laboratory](https://colab.research.google.com) is a great platform for developing machine learning and data-science driven applications on the web. It provides access to free GPU resource (Graphics Processing Units). However it also allows us to run Jupyter notebooks from a Github repository *if you have a Google account*. If you can register or have an existing Google account, using Google Colab is a really nice experience. It will allow you to save individual files and projects to your Google Drive. It also meas you can access the course anywhere off campus without needing a VPN. By clicking on the Google Colab link it will take you to the Google Colab platform. The first thing you see will be some Python code, running in a Jupyter notebook. Click anywhere in the code block and then, to the left hand side, you will see a 'play' button. If you click this button Google Colab will run the code in there. This code essentially creates a new folder on your Google Drive and then mounts that drive before downloading the entire course. Once complete you can then run through the course material from your Google account. 
 
-#### Practical 1 
-- [![Open notebook In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/loftytopping/DEES_programming_course/blob/master/Practical_1.ipynb)
-  - Solution notebook: [![Open notebook In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/loftytopping/DEES_programming_course/blob/master/solutions/Practical_1.ipynb)
-#### Practical 2 
-- [![Open notebook In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/loftytopping/DEES_programming_course/blob/master/Practical_2.ipynb)
-  - Solution notebook: [![Open notebook In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/loftytopping/DEES_programming_course/blob/master/solutions/Practical_2.ipynb)
-#### Practical 3 
-- [![Open notebook In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/loftytopping/DEES_programming_course/blob/master/Practical_3.ipynb)
-  - Solution notebook: [![Open notebook In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/loftytopping/DEES_programming_course/blob/master/solutions/Practical_3.ipynb)
-#### Practical 4 
-- [![Open notebook In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/loftytopping/DEES_programming_course/blob/master/Practical_4.ipynb)
-  - Solution notebook: [![Open notebook In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/loftytopping/DEES_programming_course/blob/master/solutions/Practical_4.ipynb)
-#### Practical 5 
-- [![Open notebook In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/loftytopping/DEES_programming_course/blob/master/Practical_5.ipynb)
-  - Solution notebook: [![Open notebook In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/loftytopping/DEES_programming_course/blob/master/solutions/Practical_5.ipynb)
-#### Practical 6 
-- [![Open notebook In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/loftytopping/DEES_programming_course/blob/master/Practical_6.ipynb)
-  - Solution notebook: [![Open notebook In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/loftytopping/DEES_programming_course/blob/master/solutions/Practical_6.ipynb)
-#### Practical 7 
-- [![Open notebook In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/loftytopping/DEES_programming_course/blob/master/Practical_7.ipynb)
-  - Solution notebook: [![Open notebook In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/loftytopping/DEES_programming_course/blob/master/solutions/Practical_7.ipynb)
-#### Practical 8
-- [![Open notebook In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/loftytopping/DEES_programming_course/blob/master/Practical_8.ipynb)
-  - Solution notebook: [![Open notebook In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/loftytopping/DEES_programming_course/blob/master/solutions/Practical_8.ipynb)
-  
-#### Assessment option 1
-- [![Open notebook In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/loftytopping/DEES_programming_course/blob/master/assessments/Option_1.ipynb)
-#### Assessment option 2
-- [![Open notebook In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/loftytopping/DEES_programming_course/blob/master/assessments/Option_2.ipynb)
-#### Assessment option 3
-- [![Open notebook In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/loftytopping/DEES_programming_course/blob/master/assessments/Option_3.ipynb)
-#### Assessment option 4
-- [![Open notebook In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/loftytopping/DEES_programming_course/blob/master/assessments/Option_4.ipynb)
-#### Assessment option 5
-- [![Open notebook In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/loftytopping/DEES_programming_course/blob/master/assessments/Option_5.ipynb)
+- [![Open notebook In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/loftytopping/DEES_programming_course/blob/master/Setup_GoogleColab.ipynb)
 
 ## Repository structure and using Jupyter notebooks <a name="Folder-Structure"></a>
 
