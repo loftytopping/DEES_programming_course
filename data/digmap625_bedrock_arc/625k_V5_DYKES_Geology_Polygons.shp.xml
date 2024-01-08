@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<metadata>
+	<idinfo>
+		<citation>
+			<citeinfo>
+				<origin>R Addison</origin>
+				<pubdate>18th Feb 2008</pubdate>
+				<title Sync="TRUE">625k_V5_DYKES_Geology_Polygons</title>
+				<geoform Sync="TRUE">vector digital data</geoform>
+				<onlink>\\kwsan\WorkSpace\IP\DiGMapGB_Project\Data\625k\v5_17\arcview\625k_V5_BEDROCK_Geology_Polygons.shp</onlink>
+				<ftname Sync="TRUE">625k_V5_DYKES_Geology_Polygons</ftname><origin>F J Floyd</origin><origin>A Smith</origin><origin>A Myers</origin></citeinfo>
+		</citation>
+		<descript>
+			<abstract>BGS 1:625000 scale BEDROCK DYKKES only GEOLOGY UK</abstract>
+			<purpose>Digital geological dataset depicting the dykes only of the bedrock geology of the United Kingdom at surface/rock head.</purpose>
+			<langdata Sync="TRUE">en</langdata></descript>
+		<timeperd>
+			<timeinfo>
+				<sngdate>
+					<caldate>18th Feb 2008</caldate>
+				</sngdate>
+			</timeinfo>
+			<current>publication date</current>
+		</timeperd>
+		<status>
+			<progress>Complete</progress>
+			<update>As needed</update>
+		</status>
+		<spdom>
+			<bounding>
+				<westbc Sync="TRUE">-8.956318</westbc>
+				<eastbc Sync="TRUE">-0.337863</eastbc>
+				<northbc Sync="TRUE">60.688556</northbc>
+				<southbc Sync="TRUE">49.999661</southbc>
+			</bounding>
+			<lboundng><leftbc Sync="TRUE">18469.536000</leftbc><rightbc Sync="TRUE">490790.421000</rightbc><bottombc Sync="TRUE">24728.353000</bottombc><topbc Sync="TRUE">1200527.034000</topbc></lboundng></spdom>
+		<keywords>
+			<theme>
+				<themekt>BEDROCK SOLID 1:625000 625k</themekt>
+				<themekey>BEDROCK GEOLOGY DYKES</themekey>
+			</theme>
+		</keywords>
+		<accconst>Copyright NERC 2008.</accconst>
+		<useconst>As defined by license.</useconst>
+		<ptcontac>
+			<cntinfo>
+				<cntperp>
+					<cntper>A Myers</cntper>
+					<cntorg>British Geological Survey</cntorg>
+				</cntperp>
+				<cntaddr>
+					<addrtype>mailing address</addrtype>
+				</cntaddr>
+			</cntinfo>
+		</ptcontac>
+		<native Sync="TRUE">Microsoft Windows XP Version 5.1 (Build 2600) Service Pack 2; ESRI ArcCatalog 9.2.4.1420</native>
+		<natvform Sync="TRUE">Shapefile</natvform></idinfo>
+	<dataqual>
+		<posacc>
+			<horizpa>
+				<qhorizpa>
+					<horizpav>+-625m</horizpav>
+					<horizpae>The data is nominally at 1:625000 scale. The value also reflects geological uncertainty and variable quality of source mapping.</horizpae>
+				</qhorizpa>
+			</horizpa>
+		</posacc>
+		<lineage>
+			<procstep>
+				<procdesc>Metadata imported.</procdesc>
+				<srcused>C:\DOCUME~1\tonym\LOCALS~1\Temp\xml145.tmp</srcused>
+			</procstep>
+			<procstep><procdesc Sync="TRUE">Metadata imported.</procdesc><srcused Sync="TRUE">C:\DOCUME~1\tonym\LOCALS~1\Temp\xml146.tmp</srcused><date Sync="TRUE">20080218</date><time Sync="TRUE">17090100</time></procstep></lineage>
+	</dataqual>
+	<spdoinfo>
+		<direct Sync="TRUE">Vector</direct>
+		<ptvctinf>
+			<sdtsterm Name="625k_V5_DYKES_Geology_Polygons">
+				<sdtstype Sync="TRUE">G-polygon</sdtstype>
+				<ptvctcnt Sync="TRUE">3263</ptvctcnt>
+			</sdtsterm>
+			<esriterm Name="625k_V5_DYKES_Geology_Polygons"><efeatyp Sync="TRUE">Simple</efeatyp><efeageom Sync="TRUE">Polygon</efeageom><esritopo Sync="TRUE">FALSE</esritopo><efeacnt Sync="TRUE">3263</efeacnt><spindex Sync="TRUE">FALSE</spindex><linrefer Sync="TRUE">FALSE</linrefer></esriterm></ptvctinf>
+	</spdoinfo>
+	<spref>
+		<horizsys>
+			<planar>
+				<planci>
+					<plance Sync="TRUE">coordinate pair</plance>
+					<coordrep>
+						<absres Sync="TRUE">0.000000</absres>
+						<ordres Sync="TRUE">0.000000</ordres>
+					</coordrep>
+					<plandu Sync="TRUE">meters</plandu>
+				</planci>
+				<mapproj><mapprojn Sync="TRUE">Transverse Mercator</mapprojn><transmer><sfctrmer Sync="TRUE">0.999601</sfctrmer><longcm Sync="TRUE">-2.000000</longcm><latprjo Sync="TRUE">49.000000</latprjo><feast Sync="TRUE">400000.000000</feast><fnorth Sync="TRUE">-100000.000000</fnorth></transmer></mapproj></planar>
+			<geodetic>
+				<horizdn Sync="TRUE">D_OSGB_1936</horizdn>
+				<ellips Sync="TRUE">Airy_1830</ellips>
+				<semiaxis Sync="TRUE">6377563.396000</semiaxis>
+				<denflat Sync="TRUE">299.324965</denflat>
+			</geodetic>
+			<cordsysn><geogcsn Sync="TRUE">GCS_OSGB_1936</geogcsn><projcsn Sync="TRUE">British_National_Grid</projcsn></cordsysn></horizsys>
+	</spref>
+	<eainfo>
+		<detailed Name="625k_V5_DYKES_Geology_Polygons">
+			<enttyp>
+				<enttypl Sync="TRUE">625k_V5_DYKES_Geology_Polygons</enttypl>
+				<enttypt Sync="TRUE">Feature Class</enttypt><enttypc Sync="TRUE">3263</enttypc></enttyp>
+			<attr>
+				<attrlabl>FID</attrlabl>
+				<attrdef>Internal feature number.</attrdef>
+				<attrdefs>ESRI</attrdefs>
+				<attrdomv>
+					<udom>Sequential unique whole numbers that are automatically generated.</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>Shape</attrlabl>
+				<attrdef>Feature geometry.</attrdef>
+				<attrdefs>ESRI</attrdefs>
+				<attrdomv>
+					<udom>Coordinates defining the features.</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>LEX</attrlabl>
+				<attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">5</attwidth></attr>
+			<attr>
+				<attrlabl>LEX_D</attrlabl>
+				<attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">200</attwidth></attr>
+			<attr>
+				<attrlabl>LEX_RCS</attrlabl>
+				<attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">12</attwidth></attr>
+			<attr>
+				<attrlabl>RCS</attrlabl>
+				<attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">6</attwidth></attr>
+			<attr>
+				<attrlabl>RCS_X</attrlabl>
+				<attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">50</attwidth></attr>
+			<attr>
+				<attrlabl>RCS_D</attrlabl>
+				<attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">200</attwidth></attr>
+			<attr>
+				<attrlabl>RANK</attrlabl>
+				<attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">16</attwidth></attr>
+			<attr>
+				<attrlabl>BED_EQ</attrlabl>
+				<attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">5</attwidth></attr>
+			<attr>
+				<attrlabl>BED_EQ_D</attrlabl>
+				<attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">200</attwidth></attr>
+			<attr>
+				<attrlabl>MB_EQ</attrlabl>
+				<attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">5</attwidth></attr>
+			<attr>
+				<attrlabl>MB_EQ_D</attrlabl>
+				<attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">200</attwidth></attr>
+			<attr>
+				<attrlabl>FM_EQ</attrlabl>
+				<attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">5</attwidth></attr>
+			<attr>
+				<attrlabl>FM_EQ_D</attrlabl>
+				<attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">200</attwidth></attr>
+			<attr>
+				<attrlabl>SUBGP_EQ</attrlabl>
+				<attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">5</attwidth></attr>
+			<attr>
+				<attrlabl>SUBGP_EQ_D</attrlabl>
+				<attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">200</attwidth></attr>
+			<attr>
+				<attrlabl>GP_EQ</attrlabl>
+				<attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">5</attwidth></attr>
+			<attr>
+				<attrlabl>GP_EQ_D</attrlabl>
+				<attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">200</attwidth></attr>
+			<attr>
+				<attrlabl>SUPGP_EQ</attrlabl>
+				<attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">5</attwidth></attr>
+			<attr>
+				<attrlabl>SUPGP_EQ_D</attrlabl>
+				<attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">200</attwidth></attr>
+			<attr>
+				<attrlabl>MAX_TIME_D</attrlabl>
+				<attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">32</attwidth></attr>
+			<attr>
+				<attrlabl>MIN_TIME_D</attrlabl>
+				<attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">32</attwidth></attr>
+			<attr>
+				<attrlabl>MAX_TIME_Y</attrlabl>
+				<attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">10</attwidth></attr>
+			<attr>
+				<attrlabl>MIN_TIME_Y</attrlabl>
+				<attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">10</attwidth></attr>
+			<attr>
+				<attrlabl>MAX_INDEX</attrlabl>
+				<attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">10</attwidth></attr>
+			<attr>
+				<attrlabl>MIN_INDEX</attrlabl>
+				<attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">10</attwidth></attr>
+			<attr>
+				<attrlabl>MAX_AGE</attrlabl>
+				<attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">32</attwidth></attr>
+			<attr>
+				<attrlabl>MIN_AGE</attrlabl>
+				<attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">32</attwidth></attr>
+			<attr>
+				<attrlabl>MAX_EPOCH</attrlabl>
+				<attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">32</attwidth></attr>
+			<attr>
+				<attrlabl>MIN_EPOCH</attrlabl>
+				<attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">32</attwidth></attr>
+			<attr>
+				<attrlabl>MAX_SUBPER</attrlabl>
+				<attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">32</attwidth></attr>
+			<attr>
+				<attrlabl>MIN_SUBPER</attrlabl>
+				<attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">32</attwidth></attr>
+			<attr>
+				<attrlabl>MAX_PERIOD</attrlabl>
+				<attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">32</attwidth></attr>
+			<attr>
+				<attrlabl>MIN_PERIOD</attrlabl>
+				<attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">32</attwidth></attr>
+			<attr>
+				<attrlabl>MAX_ERA</attrlabl>
+				<attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">32</attwidth></attr>
+			<attr>
+				<attrlabl>MIN_ERA</attrlabl>
+				<attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">32</attwidth></attr>
+			<attr>
+				<attrlabl>MAX_EON</attrlabl>
+				<attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">32</attwidth></attr>
+			<attr>
+				<attrlabl>MIN_EON</attrlabl>
+				<attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">32</attwidth></attr>
+			<attr>
+				<attrlabl>PREV_NAME</attrlabl>
+				<attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">250</attwidth></attr>
+			<attr>
+				<attrlabl>BGSTYPE</attrlabl>
+				<attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">32</attwidth></attr>
+			<attr>
+				<attrlabl>LEX_RCS_I</attrlabl>
+				<attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">20</attwidth></attr>
+			<attr>
+				<attrlabl>LEX_RCS_D</attrlabl>
+				<attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">100</attwidth></attr>
+			<attr>
+				<attrlabl>MAP_CODE</attrlabl>
+				<attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">10</attwidth></attr>
+			<attr>
+				<attrlabl>BGSREF</attrlabl>
+				<attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">10</attwidth></attr>
+			<attr>
+				<attrlabl>BGSREF_LEX</attrlabl>
+				<attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">10</attwidth></attr>
+			<attr>
+				<attrlabl>BGSREF_FM</attrlabl>
+				<attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">10</attwidth></attr>
+			<attr>
+				<attrlabl>BGSREF_GP</attrlabl>
+				<attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">10</attwidth></attr>
+			<attr>
+				<attrlabl>BGSREF_RK</attrlabl>
+				<attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">10</attwidth></attr>
+			<attr>
+				<attrlabl>SHEET</attrlabl>
+				<attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">60</attwidth></attr>
+			<attr>
+				<attrlabl>VERSION</attrlabl>
+				<attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">10</attwidth></attr>
+			<attr>
+				<attrlabl>RELEASED</attrlabl>
+				<attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">10</attwidth></attr>
+			<attr>
+				<attrlabl>NOM_SCALE</attrlabl>
+				<attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">10</attwidth></attr>
+			<attr>
+				<attrlabl>NOM_OS_YR</attrlabl>
+				<attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">10</attwidth></attr>
+			<attr>
+				<attrlabl>NOM_BGS_YR</attrlabl>
+				<attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">10</attwidth></attr>
+			<attr>
+				<attrlabl>MSLINK</attrlabl>
+				<attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">10</attwidth></attr>
+		</detailed>
+	</eainfo>
+	<distinfo>
+		<resdesc>Downloadable Data</resdesc>
+		<stdorder>
+			<digform>
+				<digtinfo>
+					<transize>12.231</transize>
+					<dssize Sync="TRUE">1.702</dssize></digtinfo>
+			</digform>
+		</stdorder>
+	</distinfo>
+	<metainfo>
+		<metd Sync="TRUE">20080218</metd>
+		<metc>
+			<cntinfo>
+				<cntaddr>
+					<addrtype>mailing address</addrtype>
+					<city>Keyworth</city>
+					<state>Nottinghamshire</state>
+					<postal>NG12 5GG</postal>
+					<country>UK</country></cntaddr>
+				<cntvoice>01159363100</cntvoice>
+				<cntperp><cntper>A Myers</cntper><cntorg>British Geoloogical Survey</cntorg></cntperp></cntinfo>
+		</metc>
+		<metstdn Sync="TRUE">FGDC Content Standards for Digital Geospatial Metadata</metstdn>
+		<metstdv Sync="TRUE">FGDC-STD-001-1998</metstdv>
+		<mettc Sync="TRUE">local time</mettc>
+		<metextns>
+			<onlink>http://www.esri.com/metadata/esriprof80.html</onlink>
+			<metprof>ESRI Metadata Profile</metprof>
+		</metextns>
+		<metextns>
+			<onlink>http://www.esri.com/metadata/esriprof80.html</onlink>
+			<metprof>ESRI Metadata Profile</metprof>
+		</metextns>
+		<langmeta Sync="TRUE">en</langmeta><metextns><onlink Sync="TRUE">http://www.esri.com/metadata/esriprof80.html</onlink><metprof Sync="TRUE">ESRI Metadata Profile</metprof></metextns></metainfo>
+	<Esri><MetaID>{332356E7-6203-4A15-9EF7-42C6A5C0A344}</MetaID><CreaDate>20080218</CreaDate><CreaTime>17090100</CreaTime><SyncOnce>FALSE</SyncOnce><SyncDate>20080218</SyncDate><SyncTime>17330000</SyncTime><ModDate>20080218</ModDate><ModTime>17333200</ModTime></Esri><dataIdInfo><envirDesc Sync="TRUE">Microsoft Windows XP Version 5.1 (Build 2600) Service Pack 2; ESRI ArcCatalog 9.2.4.1420</envirDesc><dataLang><languageCode Sync="TRUE" value="en"></languageCode></dataLang><idCitation><resTitle Sync="TRUE">625k_V5_DYKES_Geology_Polygons</resTitle><presForm><PresFormCd Sync="TRUE" value="005"></PresFormCd></presForm></idCitation><spatRpType><SpatRepTypCd Sync="TRUE" value="001"></SpatRepTypCd></spatRpType><dataExt><geoEle><GeoBndBox esriExtentType="native"><westBL Sync="TRUE">18469.536</westBL><eastBL Sync="TRUE">490790.421</eastBL><northBL Sync="TRUE">1200527.034</northBL><southBL Sync="TRUE">24728.353</southBL><exTypeCode Sync="TRUE">1</exTypeCode></GeoBndBox></geoEle></dataExt><geoBox esriExtentType="decdegrees"><westBL Sync="TRUE">-8.956318</westBL><eastBL Sync="TRUE">-0.337863</eastBL><northBL Sync="TRUE">60.688556</northBL><southBL Sync="TRUE">49.999661</southBL><exTypeCode Sync="TRUE">1</exTypeCode></geoBox></dataIdInfo><mdLang><languageCode Sync="TRUE" value="en"></languageCode></mdLang><mdStanName Sync="TRUE">ISO 19115 Geographic Information - Metadata</mdStanName><mdStanVer Sync="TRUE">DIS_ESRI1.0</mdStanVer><mdChar><CharSetCd Sync="TRUE" value="004"></CharSetCd></mdChar><mdHrLv><ScopeCd Sync="TRUE" value="005"></ScopeCd></mdHrLv><mdHrLvName Sync="TRUE">dataset</mdHrLvName><distInfo><distributor><distorTran><onLineSrc><orDesc Sync="TRUE">002</orDesc><linkage Sync="TRUE">file://\\kwsan\WorkSpace\IP\DiGMapGB_Project\Data\625k\v5_17\arcview\625k_V5_DYKES_Geology_Polygons.shp</linkage><protocol Sync="TRUE">Local Area Network</protocol></onLineSrc><transSize Sync="TRUE">1.702</transSize></distorTran><distorFormat><formatName Sync="TRUE">Shapefile</formatName></distorFormat></distributor></distInfo><refSysInfo><RefSystem><refSysID><identCode Sync="TRUE">British_National_Grid</identCode></refSysID></RefSystem></refSysInfo><spatRepInfo><VectSpatRep><topLvl><TopoLevCd Sync="TRUE" value="001"></TopoLevCd></topLvl><geometObjs Name="625k_V5_DYKES_Geology_Polygons"><geoObjTyp><GeoObjTypCd Sync="TRUE" value="001"></GeoObjTypCd></geoObjTyp><geoObjCnt Sync="TRUE">3263</geoObjCnt></geometObjs></VectSpatRep></spatRepInfo><mdDateSt Sync="TRUE">20080218</mdDateSt></metadata>

@@ -1,0 +1,357 @@
+<metadata xmlns:ns0="http://www.isotc211.org/2005/gmd" xmlns:ns1="http://www.isotc211.org/2005/gco" xmlns:ns2="http://www.opengis.net/gml" xml:lang="en"><Esri><CreaDate>20160329</CreaDate><CreaTime>09413300</CreaTime><ArcGISFormat>1.0</ArcGISFormat><ArcGISstyle>UK_Gemini_2.2</ArcGISstyle><SyncOnce>TRUE</SyncOnce></Esri><ns0:GEMINI_Metadata>
+		<ns0:fileIdentifier>
+			<ns1:CharacterString>8cf22a7a-3ca9-4ca0-b761-6b86c15dba82</ns1:CharacterString>
+		</ns0:fileIdentifier>
+		<ns0:hierarchyLevel>
+			<ns0:MD_ScopeCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/Codelist/gmxCodelists.xml#MD_ScopeCode" codeListValue="series">Series</ns0:MD_ScopeCode>
+		</ns0:hierarchyLevel>
+		<ns0:dateStamp>
+			<ns1:Date>2023-12-10</ns1:Date>
+		</ns0:dateStamp>
+		<ns0:language>
+			<ns0:LanguageCode codeList="http://www.loc.gov/standards/iso639-2/php/code_list.php" codeListValue="eng">English</ns0:LanguageCode>
+		</ns0:language>
+		<ns0:identificationInfo>
+			<ns0:MD_DataIdentification>
+				<ns0:language>
+					<ns0:LanguageCode codeList="http://www.loc.gov/standards/iso639-2/php/code_list.php" codeListValue="eng">English</ns0:LanguageCode>
+				</ns0:language>
+				<ns0:abstract>
+					<ns1:CharacterString>Substations represent the outline of a building or buildings which contains a set of equipment reducing the high voltage of electrical power transmission to that suitable for supply to consumers.</ns1:CharacterString>
+				</ns0:abstract>
+				<ns0:spatialResolution>
+					<ns0:MD_Resolution>
+						<ns0:distance>
+							<ns1:Distance uom="Meters">0.25</ns1:Distance>
+						</ns0:distance>
+					</ns0:MD_Resolution>
+				</ns0:spatialResolution>
+				<ns0:citation>
+					<ns0:CI_Citation>
+						<ns0:title>
+							<ns1:CharacterString>Electricity Transmission Substations</ns1:CharacterString>
+						</ns0:title>
+						<ns0:date>
+							<ns0:CI_Date>
+								<ns0:date>
+									<ns1:Date>2009-04-17</ns1:Date>
+								</ns0:date>
+								<ns0:dateType>
+									<ns0:CI_DateTypeCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/Codelist/gmxCodelists.xml#CI_DateTypeCode" codeListValue="creation">Creation</ns0:CI_DateTypeCode>
+								</ns0:dateType>
+							</ns0:CI_Date>
+						</ns0:date>
+						<ns0:date>
+							<ns0:CI_Date>
+								<ns0:date>
+									<ns1:Date>2019-09-13</ns1:Date>
+								</ns0:date>
+								<ns0:dateType>
+									<ns0:CI_DateTypeCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/Codelist/gmxCodelists.xml#CI_DateTypeCode" codeListValue="revision">Revision</ns0:CI_DateTypeCode>
+								</ns0:dateType>
+							</ns0:CI_Date>
+						</ns0:date>
+						<ns0:identifier>
+							<ns0:RS_Identifier>
+								<ns0:code>
+									<ns1:CharacterString>10.11.65.110\Fileshare\SystemMaintenance\NGWebSite_Extract\Substations.shp</ns1:CharacterString>
+								</ns0:code>
+								<ns0:codeSpace>
+									<ns1:CharacterString>10.11.65.110\Fileshare\SystemMaintenance\NGWebSite_Extract\Substations.shp</ns1:CharacterString>
+								</ns0:codeSpace>
+							</ns0:RS_Identifier>
+						</ns0:identifier>
+					</ns0:CI_Citation>
+				</ns0:citation>
+				<ns0:topicCategory>
+					<ns0:MD_TopicCategoryCode>structure</ns0:MD_TopicCategoryCode>
+				</ns0:topicCategory>
+				<ns0:topicCategory>
+					<ns0:MD_TopicCategoryCode>utilitiesCommunication</ns0:MD_TopicCategoryCode>
+				</ns0:topicCategory>
+				<ns0:descriptiveKeywords>
+					<ns0:MD_Keywords>
+						<ns0:keyword>
+							<ns1:CharacterString>National Grid, Transmission, Electricity, Substations</ns1:CharacterString>
+						</ns0:keyword>
+						<ns0:thesaurusName>
+							<ns0:CI_Citation>
+								<ns0:title>
+									<ns1:CharacterString>General Multilingual Environmental Thesaurus</ns1:CharacterString>
+								</ns0:title>
+								<ns0:date>
+									<ns0:CI_Date>
+										<ns0:date>
+											<ns1:Date>2016-03-29</ns1:Date>
+										</ns0:date>
+										<ns0:dateType>
+											<ns0:CI_DateTypeCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/Codelist/gmxCodelists.xml#CI_DateTypeCode" codeListValue="" />
+										</ns0:dateType>
+									</ns0:CI_Date>
+								</ns0:date>
+							</ns0:CI_Citation>
+						</ns0:thesaurusName>
+						<ns0:type>
+							<ns0:MD_KeywordTypeCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/Codelist/gmxCodelists.xml#MD_KeywordTypeCode" codeListValue="theme">Theme</ns0:MD_KeywordTypeCode>
+						</ns0:type>
+					</ns0:MD_Keywords>
+				</ns0:descriptiveKeywords>
+				<ns0:extent>
+					<ns0:EX_Extent>
+						<ns0:geographicElement>
+							<ns0:EX_GeographicDescription>
+								<ns0:geographicIdentifier>
+									<ns0:RS_Identifier>
+										<ns0:code>
+											<ns1:CharacterString>GB</ns1:CharacterString>
+										</ns0:code>
+										<ns0:authority>
+											<ns0:CI_Citation>
+												<ns0:title>
+													<ns1:CharacterString>National Grid - United Kingdom</ns1:CharacterString>
+												</ns0:title>
+												<ns0:date>
+													<ns0:CI_Date>
+														<ns0:date>
+															<ns1:Date>2016-03-29</ns1:Date>
+														</ns0:date>
+														<ns0:dateType>
+															<ns0:CI_DateTypeCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/Codelist/gmxCodelists.xml#CI_DateTypeCode" codeListValue="revision">Revision</ns0:CI_DateTypeCode>
+														</ns0:dateType>
+													</ns0:CI_Date>
+												</ns0:date>
+											</ns0:CI_Citation>
+										</ns0:authority>
+									</ns0:RS_Identifier>
+								</ns0:geographicIdentifier>
+							</ns0:EX_GeographicDescription>
+						</ns0:geographicElement>
+						<ns0:geographicElement>
+							<ns0:EX_GeographicBoundingBox>
+								<ns0:westBoundLongitude>
+									<ns1:Decimal>-8.655</ns1:Decimal>
+								</ns0:westBoundLongitude>
+								<ns0:eastBoundLongitude>
+									<ns1:Decimal>1.79</ns1:Decimal>
+								</ns0:eastBoundLongitude>
+								<ns0:southBoundLatitude>
+									<ns1:Decimal>49.9</ns1:Decimal>
+								</ns0:southBoundLatitude>
+								<ns0:northBoundLatitude>
+									<ns1:Decimal>60.85</ns1:Decimal>
+								</ns0:northBoundLatitude>
+							</ns0:EX_GeographicBoundingBox>
+						</ns0:geographicElement>
+						<ns0:temporalElement>
+							<ns0:EX_TemporalExtent>
+								<ns0:extent>
+									<ns2:TimePeriod>
+										<ns2:beginPosition>2009-04-17</ns2:beginPosition>
+										<ns2:endPosition>2023-12-10</ns2:endPosition>
+									</ns2:TimePeriod>
+								</ns0:extent>
+							</ns0:EX_TemporalExtent>
+						</ns0:temporalElement>
+					</ns0:EX_Extent>
+				</ns0:extent>
+				<ns0:pointOfContact>
+					<ns0:CI_ResponsibleParty>
+						<ns0:individualName>
+							<ns1:CharacterString>GIS Officer</ns1:CharacterString>
+						</ns0:individualName>
+						<ns0:organisationName>
+							<ns1:CharacterString>National Grid</ns1:CharacterString>
+						</ns0:organisationName>
+						<ns0:positionName>
+							<ns1:CharacterString>GIS Officer</ns1:CharacterString>
+						</ns0:positionName>
+						<ns0:contactInfo>
+							<ns0:CI_Contact>
+								<ns0:address>
+									<ns0:CI_Address>
+										<ns0:deliveryPoint>
+											<ns1:CharacterString>Warwick Technology Park</ns1:CharacterString>
+										</ns0:deliveryPoint>
+										<ns0:city>
+											<ns1:CharacterString>Warwick</ns1:CharacterString>
+										</ns0:city>
+										<ns0:administrativeArea>
+											<ns1:CharacterString>Warwickshire</ns1:CharacterString>
+										</ns0:administrativeArea>
+										<ns0:postalCode>
+											<ns1:CharacterString>CV34 6DA</ns1:CharacterString>
+										</ns0:postalCode>
+										<ns0:electronicMailAddress>
+											<ns1:CharacterString>box.GIS@nationalgrid.com</ns1:CharacterString>
+										</ns0:electronicMailAddress>
+										<ns0:country>
+											<ns0:Country codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/Codelist/ML_gmxCodelists.xml#Country" codeListValue="GBR">United Kingdom of Great Britain &amp; N. Ireland</ns0:Country>
+										</ns0:country>
+									</ns0:CI_Address>
+								</ns0:address>
+							</ns0:CI_Contact>
+						</ns0:contactInfo>
+						<ns0:role>
+							<ns0:CI_RoleCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/Codelist/gmxCodelists.xml#MD_ScopeCode" codeListValue="pointOfContact">Point of contact</ns0:CI_RoleCode>
+						</ns0:role>
+					</ns0:CI_ResponsibleParty>
+				</ns0:pointOfContact>
+				<ns0:resourceConstraints>
+					<ns0:MD_Constraints>
+						<ns0:useLimitation>
+							<ns1:CharacterString>This dataset is for indicative purposes only. It can only be used for Emergency and Land Use planning and cannot be used for commercial purposes. This dataset is owned by National Grid and acknowledgement of this is required in your product or application using &#169; National Grid UK.</ns1:CharacterString>
+						</ns0:useLimitation>
+						<ns0:useLimitation>
+							<ns1:CharacterString>This data is supplied on a best effort basis only, utilising available information as documented at the time by the transmission network operators. While every effort is made to ensure the information is accurate and up-to-date, National Grid does not accept any liability for any direct, indirect or consequential loss or damage of any nature, however caused, which may be sustained as a result of reliance upon such information</ns1:CharacterString>
+						</ns0:useLimitation>
+					</ns0:MD_Constraints>
+				</ns0:resourceConstraints>
+				<ns0:resourceConstraints>
+					<ns0:MD_LegalConstraints>
+						<ns0:otherConstraints>
+							<ns1:CharacterString>Restricted</ns1:CharacterString>
+						</ns0:otherConstraints>
+					</ns0:MD_LegalConstraints>
+				</ns0:resourceConstraints>
+				<ns0:resourceMaintenance>
+					<ns0:MD_MaintenanceInformation>
+						<ns0:maintenanceAndUpdateFrequency>
+							<ns0:MD_MaintenanceFrequencyCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/Codelist/gmxCodelists.xml#MD_MaintenanceFrequencyCode" codeListValue="annually">Annually</ns0:MD_MaintenanceFrequencyCode>
+						</ns0:maintenanceAndUpdateFrequency>
+					</ns0:MD_MaintenanceInformation>
+				</ns0:resourceMaintenance>
+			</ns0:MD_DataIdentification>
+		</ns0:identificationInfo>
+		<ns0:distributionInfo>
+			<ns0:MD_Distribution>
+				<ns0:transferOptions>
+					<ns0:MD_DigitalTransferOptions>
+						<ns0:onLine>
+							<ns0:CI_OnlineResource>
+								<ns0:linkage>
+									<ns0:URL>10.11.65.110\Fileshare\SystemMaintenance\NGWebSite_Extract\Substations.shp</ns0:URL>
+								</ns0:linkage>
+							</ns0:CI_OnlineResource>
+						</ns0:onLine>
+					</ns0:MD_DigitalTransferOptions>
+				</ns0:transferOptions>
+				<ns0:distributionFormat>
+					<ns0:MD_Format>
+						<ns0:name>
+							<ns1:CharacterString>ESRI ArcGIS</ns1:CharacterString>
+						</ns0:name>
+						<ns0:version>
+							<ns1:CharacterString>10.3</ns1:CharacterString>
+						</ns0:version>
+					</ns0:MD_Format>
+				</ns0:distributionFormat>
+			</ns0:MD_Distribution>
+		</ns0:distributionInfo>
+		<ns0:dataQualityInfo>
+			<ns0:DQ_DataQuality>
+				<ns0:lineage>
+					<ns0:LI_Lineage>
+						<ns0:statement>
+							<ns1:CharacterString>This dataset is for indicative purposes only. It can only be used for Emergency and Land Use planning and cannot be used for commercial purposes. It is owned by National Grid and acknowledgement of this is required in your product or application using &#169; National Grid UK. 
+
+The data is supplied on a best effort basis only, utilising available information as documented at the time by the transmission network operators. While every effort is made to ensure the information is accurate and up-to-date, National Grid does not accept any liability for any direct, indirect or consequential loss or damage of any nature, however caused, which may be sustained as a result of reliance upon such information.
+
+The dataset contains Gas and Electricity Transmission data only. For Gas or Electricity distribution data, please contact the retaining distribution company for your area and see the following websites for more information and contact details:
+
+Electricity Distribution: http://www2.nationalgrid.com/UK/Our-company/electricity/Distribution-Network-Operator-Companies/
+Gas Distribution: http://www2.nationalgrid.com/UK/Our-company/Gas/Gas-Distribution-Network/
+
+If you are planning to undertake any ground works please see the following website (http://cadentgas.com/Digging-safely) or contact the Plant Protection team at least 14 days in advance on 0800 688 588 or plantprotection@cadentgas.com.  
+
+For any National Grid Transmission GIS related enquiries, please email box.GIS@nationalgrid.com. 
+</ns1:CharacterString>
+						</ns0:statement>
+					</ns0:LI_Lineage>
+				</ns0:lineage>
+				<ns0:report>
+					<ns0:DQ_DomainConsistency>
+						<ns0:result>
+							<ns0:DQ_ConformanceResult>
+								<ns0:pass>
+									<ns1:Boolean>false</ns1:Boolean>
+								</ns0:pass>
+								<ns0:specification>
+									<ns0:CI_Citation>
+										<ns0:title>
+											<ns1:CharacterString>Conformance Results</ns1:CharacterString>
+										</ns0:title>
+										<ns0:date>
+											<ns0:CI_Date>
+												<ns0:date>
+													<ns1:Date>2016-03-29</ns1:Date>
+												</ns0:date>
+												<ns0:dateType>
+													<ns0:CI_DateTypeCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/Codelist/gmxCodelists.xml#CI_DateTypeCode" codeListValue="revision">Revision</ns0:CI_DateTypeCode>
+												</ns0:dateType>
+											</ns0:CI_Date>
+										</ns0:date>
+									</ns0:CI_Citation>
+								</ns0:specification>
+								<ns0:explanation>
+									<ns1:CharacterString>No data conformity checks have been carried out</ns1:CharacterString>
+								</ns0:explanation>
+							</ns0:DQ_ConformanceResult>
+						</ns0:result>
+					</ns0:DQ_DomainConsistency>
+				</ns0:report>
+			</ns0:DQ_DataQuality>
+		</ns0:dataQualityInfo>
+		<ns0:referenceSystemInfo>
+			<ns0:MD_ReferenceSystem>
+				<ns0:referenceSystemIdentifier>
+					<ns0:RS_Identifier>
+						<ns0:code>
+							<ns1:CharacterString>Great Britain National Grid</ns1:CharacterString>
+						</ns0:code>
+					</ns0:RS_Identifier>
+				</ns0:referenceSystemIdentifier>
+			</ns0:MD_ReferenceSystem>
+		</ns0:referenceSystemInfo>
+		<ns0:contact>
+			<ns0:CI_ResponsibleParty>
+				<ns0:individualName>
+					<ns1:CharacterString>GIS Officer</ns1:CharacterString>
+				</ns0:individualName>
+				<ns0:organisationName>
+					<ns1:CharacterString>National Grid</ns1:CharacterString>
+				</ns0:organisationName>
+				<ns0:positionName>
+					<ns1:CharacterString>GIS Officer</ns1:CharacterString>
+				</ns0:positionName>
+				<ns0:contactInfo>
+					<ns0:CI_Contact>
+						<ns0:address>
+							<ns0:CI_Address>
+								<ns0:deliveryPoint>
+									<ns1:CharacterString>Warwick Technology Park</ns1:CharacterString>
+								</ns0:deliveryPoint>
+								<ns0:city>
+									<ns1:CharacterString>Warwick</ns1:CharacterString>
+								</ns0:city>
+								<ns0:administrativeArea>
+									<ns1:CharacterString>Warwickshire</ns1:CharacterString>
+								</ns0:administrativeArea>
+								<ns0:postalCode>
+									<ns1:CharacterString>CV34 6DA</ns1:CharacterString>
+								</ns0:postalCode>
+								<ns0:electronicMailAddress>
+									<ns1:CharacterString>box.GIS@nationalgrid.com</ns1:CharacterString>
+								</ns0:electronicMailAddress>
+								<ns0:country>
+									<ns0:Country codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/Codelist/ML_gmxCodelists.xml#Country" codeListValue="GBR">United Kingdom of Great Britain &amp; N. Ireland</ns0:Country>
+								</ns0:country>
+							</ns0:CI_Address>
+						</ns0:address>
+					</ns0:CI_Contact>
+				</ns0:contactInfo>
+				<ns0:role>
+					<ns0:CI_RoleCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/Codelist/gmxCodelists.xml#MD_ScopeCode" codeListValue="pointOfContact">Point of contact</ns0:CI_RoleCode>
+				</ns0:role>
+			</ns0:CI_ResponsibleParty>
+		</ns0:contact>
+	</ns0:GEMINI_Metadata></metadata>
