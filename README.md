@@ -11,10 +11,10 @@ At the start of this course we will explain how you will access and interact wit
 # Table of contents
 1. [Course overview](#Course-overview)
 2. [Running the models](#Running)
-     * 2a. [Using the University Jupyter-hub **(recommended for UoM students)**](#UoMhub)
+     * 2a. [Using the University Cluster](#UoMhub)
      * 2b. [Using your own machine](#own)
-     * 2c. [Using Binder](#Binder)
-     * 2d. [Using Google Colab](#Colab)
+     * 2c. [Using Google Colab](#Colab)
+     * 2d. [Using Binder](#Binder)
 3. [Folder structure and running the examples](#Folder-Structure)
 4. [Expectations and pace of learning](#Expectations)
 5. [Code of Conduct](#Code-of-Conduct)
@@ -71,17 +71,21 @@ In the command prompt, you will see the name (DEES_programming_env) replace (bas
 
 Can you see the project folders and files? You are good to go! Every time you now want to open the notebooks for this project, open either the Anaconda prompt or Terminal, activate the environment and then run the last command from within the project folder.
 
-### 2(c). Binder <a name="Binder"></a>
+### 2(c). Using Google Colab<a name="Colab"></a>
+
+Google's Colab [Co-laboratory](https://colab.research.google.com) is a great platform for developing machine learning and data-science driven applications on the web. It provides access to free GPU resource (Graphics Processing Units). However it also allows us to run Jupyter notebooks from a Github repository *if you have a Google account*. If you can register or have an existing Google account, using Google Colab is a really nice experience. It will allow you to save individual files and projects to your Google Drive. It also meas you can access the course anywhere off campus without needing a VPN. 
+
+By clicking on the Google Colab link below it will take you to the Google Colab platform. The first thing you see will be some Python code, running in a Jupyter notebook. Click anywhere in the code block and then, to the left hand side, you will see a 'play' button. If you click this button Google Colab will run the code in there. This code essentially creates a new folder on your Google Drive and then mounts that drive before downloading the entire course. **You will need to confirm you are happy linking your google account to proceed*. In fact, everytime you re-open the course material there is some code to re-mount your google drive. You will be asked if you approve this. If you do not, it is likely you will not be able to access the data used in the examples.
+
+Once complete you can then run through the course material from your Google account. 
+
+- [![Open notebook In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/loftytopping/DEES_programming_course/blob/master/Setup_GoogleColab.ipynb)
+
+### 2(d). Binder <a name="Binder"></a>
 
 If you do not, or cannot, run Python from your own machine we have provided the ability for you to interact with these files using Binder. The Binder project offers an easy place to share computing environments to everyone. It allows users to specify custom environments and share them with a [single link](https://jupyter.org/binder). Indeed, if you click the link below this will spin-up an individual session for you. Please bare in mind it can take a while to start, and if idle for a short period these sessions will stop. However you can download your notebook file during the session. Everytime you start a Binder link, it will start from scratch.
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/loftytopping/DEES_programming_course/HEAD)
-
-### 2(d). Using Google Colab<a name="Colab"></a>
-
-Google's Colab [Co-laboratory](https://colab.research.google.com) is a great platform for developing machine learning and data-science driven applications on the web. It provides access to free GPU resource (Graphics Processing Units). However it also allows us to run Jupyter notebooks from a Github repository *if you have a Google account*. If you can register or have an existing Google account, using Google Colab is a really nice experience. It will allow you to save individual files and projects to your Google Drive. It also meas you can access the course anywhere off campus without needing a VPN. By clicking on the Google Colab link it will take you to the Google Colab platform. The first thing you see will be some Python code, running in a Jupyter notebook. Click anywhere in the code block and then, to the left hand side, you will see a 'play' button. If you click this button Google Colab will run the code in there. This code essentially creates a new folder on your Google Drive and then mounts that drive before downloading the entire course. Once complete you can then run through the course material from your Google account. 
-
-- [![Open notebook In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/loftytopping/DEES_programming_course/blob/master/Setup_GoogleColab.ipynb)
 
 ## Repository structure and using Jupyter notebooks <a name="Folder-Structure"></a>
 
