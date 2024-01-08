@@ -6,7 +6,7 @@ This repository contains a series of [Jupyter](https://jupyter.org) notebooks de
 
 At the start of this course we will explain how you will access and interact with the course materials, but this repository also outlines multiple ways you can work with us from your own machine to running on free cloud services. 
 
-<img src="images/Introduction.png" width="800"/>
+<img src="images/Intro2.png" width="800"/>
 
 # Table of contents
 1. [Course overview](#Course-overview)
