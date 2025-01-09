@@ -1,0 +1,11 @@
+name: DEES_programming
+channels:
+  - defaults
+  - https://repo.anaconda.com/pkgs/main
+  - https://repo.anaconda.com/pkgs/r
+  - https://repo.anaconda.com/pkgs/msys2
+dependencies:
+  - conda-forge::cartopy
+  - conda-forge::contextily
+  - conda-forge::geopandas
+prefix: C:\Users\davet\anaconda3\envs\DEES_programming
