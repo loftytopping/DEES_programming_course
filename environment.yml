@@ -8,4 +8,6 @@ dependencies:
   - conda-forge::cartopy
   - conda-forge::contextily
   - conda-forge::geopandas
+  - conda-forge::jupyter
+  - conda-forge::seaborn
 prefix: C:\Users\davet\anaconda3\envs\DEES_programming
