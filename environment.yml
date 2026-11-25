@@ -1,13 +1,15 @@
-name: DEES_programming
+name: DEES_python
 channels:
-  - defaults
-  - https://repo.anaconda.com/pkgs/main
-  - https://repo.anaconda.com/pkgs/r
-  - https://repo.anaconda.com/pkgs/msys2
+  - conda-forge
 dependencies:
-  - conda-forge::cartopy
-  - conda-forge::contextily
-  - conda-forge::geopandas
-  - conda-forge::jupyter
-  - conda-forge::seaborn
-prefix: C:\Users\davet\anaconda3\envs\DEES_programming
+  - python>=3.10
+  - numpy
+  - scipy
+  - pandas
+  - matplotlib
+  - seaborn
+  - scikit-learn
+  - cartopy
+  - contextily
+  - geopandas
+  - jupyter
