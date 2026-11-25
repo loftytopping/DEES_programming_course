@@ -6,7 +6,7 @@ for example ``check.exercise1()``. Those functions look up the variables the
 student created in their notebook and print friendly feedback.
 
 The checks are only there to help you learn. They are not marked, and the
-proposed solutions in the solutions/ folder remain the reference answers.
+proposed solutions in the "Show solution" dropdowns remain the reference answers.
 """
 
 import ast

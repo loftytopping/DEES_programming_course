@@ -13,7 +13,25 @@ and a **Check your answer** cell after every `INSERT CODE HERE` exercise that ca
 - On Google Colab the setup cell downloads these files from the `master` branch if
   the folder is not next to the notebook.
 
-To confirm the checks still agree with `solutions/` after changing an exercise:
+## Solutions inside the notebooks
+
+Each exercise is followed by its check cell and then a markdown cell tagged
+`solution` holding a collapsible **Show solution** dropdown (`<details>` HTML with a
+Python code block). The code block is the complete exercise cell once solved, so the
+scripts below can paste it into the exercise cell and run the notebook. To change a
+solution, edit the code inside the dropdown. Practicals not yet converted still use
+`solutions/`, and `convert_to_dropdowns.py N` moves Practical N's answers across.
+
+- `notebook_solutions.py`: shared helpers for reading the dropdowns.
+- `run_solutions.py`: runs every practical with its solutions filled in and fails if
+  any cell errors or any check does not pass. GitHub Actions runs this.
+
+    python selfcheck/run_solutions.py        # all practicals
+    python selfcheck/run_solutions.py 1      # just Practical 1
+
+## Validating the checks
+
+To confirm the checks still agree with the solutions after changing an exercise:
 
     pip install nbclient ipykernel numpy matplotlib scipy pandas seaborn \
         scikit-learn cartopy geopandas contextily

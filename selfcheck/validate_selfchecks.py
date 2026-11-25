@@ -1,10 +1,11 @@
-"""Maintainer script: make sure the self-check cells agree with solutions/.
+"""Maintainer script: make sure the self-check cells agree with the solutions.
 
 For each practical that has self-checks, this script builds two copies of the
 student notebook and runs them with a real Jupyter kernel:
 
-1. "solved": every exercise cell is replaced by the matching cell from
-   solutions/. Every check cell must then report "all checks passed".
+1. "solved": every exercise cell is replaced by the code in its "Show solution"
+   dropdown (or, for a practical not yet converted to dropdowns, by the matching
+   cell from solutions/). Every check cell must then report "all checks passed".
 2. "blank": the notebook exactly as students get it. No check cell may pass
    or crash with a traceback; each should print friendly feedback instead.
 
@@ -24,6 +25,9 @@ from pathlib import Path
 import nbformat
 from nbclient import NotebookClient
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from notebook_solutions import is_check, is_solution, solved_copy  # noqa: E402
+
 ROOT = Path(__file__).resolve().parent.parent
 PRACTICALS = [int(a) for a in sys.argv[1:]] or list(range(1, 10))
 PASS_TEXT = "all checks passed"
@@ -37,10 +41,6 @@ def text_of(cell):
         elif out.get("output_type") == "error":
             parts.append("TRACEBACK " + out["ename"] + ": " + out["evalue"])
     return "".join(parts)
-
-
-def is_check(cell):
-    return cell.cell_type == "code" and cell.source.lstrip().startswith("# Check your answer")
 
 
 def exercise_cells(nb):
@@ -90,11 +90,13 @@ def main():
     for p in PRACTICALS:
         path = ROOT / f"Practical_{p}.ipynb"
         student = nbformat.read(path, as_version=4)
-        solution = nbformat.read(ROOT / "solutions" / path.name, as_version=4)
-
-        solved = nbformat.read(path, as_version=4)
-        for i, src in solution_cells(student, solution):
-            solved.cells[i].source = src
+        if any(is_solution(c) for c in student.cells):
+            solved = solved_copy(student)
+        else:
+            solution = nbformat.read(ROOT / "solutions" / path.name, as_version=4)
+            solved = nbformat.read(path, as_version=4)
+            for i, src in solution_cells(student, solution):
+                solved.cells[i].source = src
         for ex, out in run(solved):
             ok = PASS_TEXT in out and "TRACEBACK" not in out
             print(f"Practical {p} Exercise {ex} [solved]: {'PASS' if ok else 'FAIL'}")
@@ -110,7 +112,7 @@ def main():
     if problems:
         print("\n\n".join(problems))
         sys.exit(1)
-    print("\nAll self-checks agree with solutions/.")
+    print("\nAll self-checks agree with the solutions.")
 
 
 if __name__ == "__main__":

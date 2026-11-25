@@ -94,7 +94,8 @@ If you do not, or cannot, run Python from your own machine we have provided the 
     |------ data                  # Data used in assignment notebooks
     ├── data                    # Contains data used in Pandas examples 
     ├── images                  # Contains images for all notebooks
-    ├── solutions               # Contains the same notebooks as in our root folder but with solutions
+    ├── selfcheck               # 'Check your answer' cells and maintainer scripts that test the solutions
+    ├── solutions               # Full solution notebooks (being replaced by 'Show solution' dropdowns in each practical)
     |------ data                  # Data used in solutions notebooks
     |------ images                # images used in solutions notebooks
     ├── Practical 1.            # Individual notebook practicals
@@ -104,7 +105,7 @@ If you do not, or cannot, run Python from your own machine we have provided the 
     
 ## Expectations and pace of learning<a name="Expectations"></a>
 
-We cant teach everything Python or any programming language has to offer in this course, but we can given you a set of tools to begin your journey into the wonderful world of programming and data analysis in aerosol science. Please note that you should not feel pressured to complete every exercise in class. These practicals are designed for you to take outside of class and continue working on them. Proposed solutions to all exercises can be found in the 'solutions' folder. After reading the instructions and aims of any exercise, search the code snippets for a note that reads ------'INSERT CODE HERE'------ to identify where you need to write your code. These are often proposed solutions and you may have your own way of solving then. That is fine! Quite often in programming there are many ways to 'cut the cloth'. In this course we will not cover optimisation but try to stick to a 'Pythonic' way of solving things without sacrificing your learning path. 
+We cant teach everything Python or any programming language has to offer in this course, but we can given you a set of tools to begin your journey into the wonderful world of programming and data analysis in aerosol science. Please note that you should not feel pressured to complete every exercise in class. These practicals are designed for you to take outside of class and continue working on them. Proposed solutions to the exercises are hidden in a 'Show solution' dropdown below each exercise (Practical 1 so far), or in the 'solutions' folder for the other practicals. After reading the instructions and aims of any exercise, search the code snippets for a note that reads ------'INSERT CODE HERE'------ to identify where you need to write your code. These are often proposed solutions and you may have your own way of solving then. That is fine! Quite often in programming there are many ways to 'cut the cloth'. In this course we will not cover optimisation but try to stick to a 'Pythonic' way of solving things without sacrificing your learning path. 
     
 ## Code of Conduct<a name="Code-of-Conduct"></a>
 
