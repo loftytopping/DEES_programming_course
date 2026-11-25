@@ -69,3 +69,88 @@ def exercise2():
         c.sequence("solution", solution, expected, rel=1e-3, atol=1e-3,
                    describe_index=lambda i: f"time step {i[0]} ({'rabbits' if i[1] == 0 else 'foxes'})",
                    hints=[(expected[:, ::-1], "Rabbits and foxes are swapped. Pass the starting values as (U0, V0).")])
+
+
+ROCKET = dict(g=9.81, thrust=4000.0, Isp=220.0, m0=100.0, m_dry=40.0, Cd=0.5,
+              A=np.pi * 0.1**2, rho0=1.225, H=8500.0)
+
+
+def _rocket_derivatives(state, p):
+    h, v, m = state
+    if m > p["m_dry"]:
+        T, dm = p["thrust"], -p["thrust"] / (p["Isp"] * p["g"])
+    else:
+        T, dm = 0.0, 0.0
+    D = 0.5 * p["rho0"] * np.exp(-h / p["H"]) * p["Cd"] * p["A"] * v * abs(v)
+    return [v, (T - m * p["g"] - D) / m, dm]
+
+
+def exercise3():
+    """Exercise 3: vertical launch of a sounding rocket with fuel burn and drag."""
+    from scipy.integrate import odeint
+
+    with Checker("Practical 5, Exercise 3") as c:
+        func = c.need("rocket_equations")
+        p = dict(ROCKET)
+        changed = [k for k in p if k in c.ns and not np.isclose(c.ns[k], p[k])]
+        if changed:
+            c.fail(f"These parameters are different from the template: {', '.join(changed)}.",
+                   "The checks use the template values. Change them back, re-run the exercise cell, "
+                   "then try the questions once the checks pass.")
+            c.stop()
+
+        def call(state):
+            try:
+                return [float(x) for x in func(list(state), 0.0)]
+            except Exception as exc:  # noqa: BLE001
+                c.fail(f"`rocket_equations` crashed: {type(exc).__name__}: {exc}",
+                       "Take h = array[0], v = array[1] and m = array[2] first, and make sure "
+                       "dh_dt, dv_dt and dm_dt all get a value.")
+                c.stop()
+
+        launch = call([0.0, 0.0, 100.0])           # on the pad, full of fuel
+        climbing = call([5000.0, 300.0, 70.0])     # burning, moving fast through the air
+        coasting = call([20000.0, 500.0, 40.0])    # fuel used up
+        falling = call([40000.0, -300.0, 40.0])    # coming back down
+
+        c.check(np.isclose(climbing[0], 300.0) and np.isclose(falling[0], -300.0),
+                "dh/dt = v is correct", "dh/dt is not right yet.", "The rate of change of height is just the velocity: dh_dt = v")
+        c.check(np.isclose(launch[2], -4000.0 / (220.0 * 9.81)) and np.isclose(coasting[2], 0.0),
+                "The mass falls while the engine burns, then stays constant",
+                "dm/dt is not right yet.",
+                "Inside the if (m > m_dry): dm_dt = -thrust / (Isp * g). In the else part: dm_dt = 0.0")
+        c.check(np.isclose(launch[1], (4000.0 - 100.0 * 9.81) / 100.0),
+                "dv/dt at launch is correct (thrust minus weight, no drag yet)",
+                "dv/dt at launch is not right yet.",
+                "At launch v = 0, so there is no drag: dv_dt = (T - m*g - D) / m with T = thrust.")
+        exp_coast = _rocket_derivatives([20000.0, 500.0, 40.0], p)[1]
+        if not np.isclose(coasting[1], exp_coast, rtol=1e-4):
+            if np.isclose(coasting[1], (4000.0 - 40.0 * 9.81 - 0.5 * 1.225 * np.exp(-20000 / 8500) * 0.5 * p["A"] * 500**2) / 40.0, rtol=1e-4):
+                c.fail("The engine keeps burning after the fuel has run out.",
+                       "Set T = 0.0 in the else part of your if statement.")
+            else:
+                c.fail("dv/dt is not right once the fuel has run out.",
+                       "Check the drag: D = 0.5 * rho * Cd * A * v * abs(v), with rho = rho0 * np.exp(-h / H).")
+        else:
+            c.ok("The engine switches off when the fuel runs out")
+        exp_fall = _rocket_derivatives([40000.0, -300.0, 40.0], p)[1]
+        if np.isclose(falling[1], exp_fall, rtol=1e-4):
+            c.ok("Drag acts against the motion, both going up and coming down")
+        else:
+            wrong = -9.81 - 0.5 * 1.225 * np.exp(-40000 / 8500) * 0.5 * p["A"] * 300**2 / 40.0
+            c.fail("dv/dt is not right while the rocket is falling.",
+                   "Use v * abs(v) in the drag, not v**2, so that drag pushes upwards on the way down."
+                   if np.isclose(falling[1], wrong, rtol=1e-4) else
+                   "Check the drag: D = 0.5 * rho * Cd * A * v * abs(v), with rho = rho0 * np.exp(-h / H).")
+
+        t = np.array(c.need("t"), dtype=float)
+        solution = np.array(c.need("solution"), dtype=float)
+        expected = odeint(lambda s, _t: _rocket_derivatives(s, p), (0.0, 0.0, 100.0), t)
+        if solution.shape != expected.shape:
+            c.fail(f"`solution` has shape {solution.shape}, but it should have shape {expected.shape}.",
+                   "Call odeint(rocket_equations, (0.0, 0.0, m0), t): three starting values, height, velocity and mass.")
+        else:
+            c.check(np.allclose(solution, expected, rtol=1e-3, atol=1e-2),
+                    f"`solution` is correct: the apogee is {expected[:, 0].max() / 1000:.1f} km",
+                    "`solution` does not match the expected flight.",
+                    "Start on the ground, at rest and full of fuel: odeint(rocket_equations, (0.0, 0.0, m0), t)")
