@@ -19,8 +19,7 @@ Each exercise is followed by its check cell and then a markdown cell tagged
 `solution` holding a collapsible **Show solution** dropdown (`<details>` HTML with a
 Python code block). The code block is the complete exercise cell once solved, so the
 scripts below can paste it into the exercise cell and run the notebook. To change a
-solution, edit the code inside the dropdown. Practicals not yet converted still use
-`solutions/`, and `convert_to_dropdowns.py N` moves Practical N's answers across.
+solution, edit the code inside the dropdown.
 
 - `notebook_solutions.py`: shared helpers for reading the dropdowns.
 - `run_solutions.py`: runs every practical with its solutions filled in and fails if

@@ -87,4 +87,9 @@ def solved_copy(nb):
     solved = copy.deepcopy(nb)
     for i, code in solution_pairs(nb):
         solved.cells[i].source = code
+        # A blank exercise may be tagged raises-exception (e.g. the "error
+        # detective" boxes), but its solution must run cleanly.
+        tags = solved.cells[i].metadata.get("tags", [])
+        if "raises-exception" in tags:
+            solved.cells[i].metadata["tags"] = [t for t in tags if t != "raises-exception"]
     return solved

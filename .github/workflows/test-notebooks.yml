@@ -34,6 +34,5 @@ jobs:
 
       - name: Run every practical with its solutions
         # Pastes the code from each "Show solution" dropdown into its exercise
-        # cell and runs the notebook; practicals not yet converted to dropdowns
-        # are run from solutions/. See selfcheck/run_solutions.py.
+        # cell and runs the notebook. See selfcheck/run_solutions.py.
         run: python selfcheck/run_solutions.py

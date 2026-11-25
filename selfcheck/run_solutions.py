@@ -9,8 +9,6 @@ Jupyter kernel. A practical fails if
   error on purpose, are allowed to), or
 - any "Check your answer" cell does not say "all checks passed".
 
-A practical that has no solution dropdowns yet is run from solutions/ instead.
-
 Run from the repository root:
 
     python selfcheck/run_solutions.py        # all practicals
@@ -40,15 +38,14 @@ def run_practical(p):
     """Return a list of problems (empty if the practical is fine)."""
     path = ROOT / f"Practical_{p}.ipynb"
     nb = nbformat.read(path, as_version=4)
-    if any(is_solution(c) for c in nb.cells):
-        nb, workdir, source = solved_copy(nb), ROOT, path.name + " (solution dropdowns)"
-    else:
-        path = ROOT / "solutions" / path.name
-        nb, workdir, source = nbformat.read(path, as_version=4), path.parent, "solutions/" + path.name
+    source = path.name
+    if not any(is_solution(c) for c in nb.cells):
+        return [f"{source}: has no 'Show solution' dropdowns to test"]
+    nb = solved_copy(nb)
     print(f"Running {source} ...", flush=True)
 
     client = NotebookClient(nb, timeout=900, kernel_name="python3",
-                            resources={"metadata": {"path": str(workdir)}})
+                            resources={"metadata": {"path": str(ROOT)}})
     try:
         client.execute()
     except CellExecutionError as err:
