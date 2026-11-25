@@ -9,11 +9,13 @@ The checks are only there to help you learn. They are not marked, and the
 proposed solutions in the solutions/ folder remain the reference answers.
 """
 
+import ast
 import contextlib
 import inspect
 import io
 import math
 import re
+import warnings
 
 try:
     import numpy as np
@@ -123,7 +125,7 @@ class Checker:
                 return self.fail(f"`{name}` is {actual}, which is not quite right.", hint)
         return self.fail(f"`{name}` is {actual}, but it should be about {expected}.")
 
-    def sequence(self, name, actual, expected, rel=1e-6, describe_index=None, hints=()):
+    def sequence(self, name, actual, expected, rel=1e-6, describe_index=None, hints=(), atol=1e-12):
         """Compare a list or NumPy array (1D or 2D) with the expected values.
 
         ``describe_index(i)`` turns a position into words for the message.
@@ -141,11 +143,11 @@ class Checker:
                 return self.fail(f"`{name}` has {a.size} values, but it should have {e.size}.",
                                  "Check the number you passed to range().")
             return self.fail(f"`{name}` has shape {a.shape}, but it should have shape {e.shape}.")
-        good = np.isclose(a, e, rtol=rel, atol=1e-12)
+        good = np.isclose(a, e, rtol=rel, atol=atol)
         if good.all():
             return self.ok(f"`{name}` has the right {_size_words(e)} and every value is correct")
         for wrong, hint in hints:
-            if np.shape(wrong) == a.shape and np.isclose(a, np.array(wrong, dtype=float), rtol=rel).all():
+            if np.shape(wrong) == a.shape and np.isclose(a, np.array(wrong, dtype=float), rtol=rel, atol=atol).all():
                 return self.fail(f"`{name}` is not quite right.", hint)
         idx = tuple(int(i) for i in np.argwhere(~good)[0])
         where = describe_index(idx) if describe_index else f"position {list(idx)}"
@@ -154,13 +156,19 @@ class Checker:
             f"`{name}` has {n_bad} wrong value(s). The first one is at {where}: "
             f"you have {_fmt(a[idx])}, expected {_fmt(e[idx])}.")
 
-    # -- printed output -------------------------------------------------
+    # -- re-running an exercise cell ----------------------------------------
     def output_of_exercise_cell(self, anchors):
-        """Re-run the most recent cell containing one of ``anchors`` and return what it printed.
+        """Re-run the exercise cell and return what it printed."""
+        return self.rerun_exercise_cell(anchors).printed
 
-        Some exercises only ask you to print things, so there is no variable to
-        look at. In that case we find the exercise cell in your notebook history
-        and run it again quietly to capture its printed output.
+    def rerun_exercise_cell(self, anchors):
+        """Quietly re-run the most recent cell containing one of ``anchors``.
+
+        Some exercises only ask you to print something or draw a plot, so there
+        is no variable to look at. In that case we find the exercise cell in your
+        notebook history and run it again behind the scenes. Returns a
+        ``CellRun`` with what it printed, the value of its last line (what
+        Jupyter would show as Out[..]) and any Matplotlib figures it drew.
         """
         history = self.ns.get("In")
         if not history:
@@ -176,15 +184,91 @@ class Checker:
         if source is None:
             self.fail("I can't find your exercise cell.", "Run the exercise cell above first, then this cell.")
             self.stop()
-        buffer = io.StringIO()
+
         try:
-            with contextlib.redirect_stdout(buffer):
-                exec(compile(source, "<exercise cell>", "exec"), dict(self.ns))
+            tree = ast.parse(source)
+        except SyntaxError as exc:
+            self.fail(f"Your exercise cell has a syntax error on line {exc.lineno}: {exc.msg}",
+                      "Look for a missing value after '=', a missing bracket or wrong indentation.")
+            self.stop()
+        last_expr = None
+        if tree.body and isinstance(tree.body[-1], ast.Expr):
+            last_expr = ast.Expression(tree.body.pop().value)
+
+        plt = _pyplot()
+        before = set(plt.get_fignums()) if plt else set()
+        real_show = plt.show if plt else None
+        if plt:
+            plt.show = lambda *args, **kwargs: None  # keep the figures so we can look at them
+        namespace = dict(self.ns)
+        buffer = io.StringIO()
+        value = None
+        try:
+            with contextlib.redirect_stdout(buffer), warnings.catch_warnings():
+                warnings.simplefilter("ignore")
+                exec(compile(tree, "<exercise cell>", "exec"), namespace)
+                if last_expr is not None:
+                    value = eval(compile(last_expr, "<exercise cell>", "eval"), namespace)
         except Exception as exc:  # noqa: BLE001 - we want to report any error
             self.fail(f"Your exercise cell stops with an error: {type(exc).__name__}: {exc}",
                       "Fix the error in the exercise cell first.")
             self.stop()
-        return buffer.getvalue()
+        finally:
+            figures = []
+            if plt:
+                plt.show = real_show
+                figures = [plt.figure(n) for n in plt.get_fignums() if n not in before]
+                for fig in figures:
+                    plt.close(fig)
+        return CellRun(buffer.getvalue(), value, figures, namespace)
+
+
+class CellRun:
+    """What happened when an exercise cell was re-run by a check."""
+
+    def __init__(self, printed, value, figures, namespace):
+        self.printed = printed
+        self.value = value
+        self.figures = figures
+        self.namespace = namespace
+
+    @property
+    def axes(self):
+        return [ax for fig in self.figures for ax in fig.axes]
+
+
+def _pyplot():
+    try:
+        import matplotlib.pyplot as plt
+    except ImportError:
+        return None
+    return plt
+
+
+def bar_heights(ax):
+    """Total height of the histogram bars drawn on a Matplotlib axes."""
+    from matplotlib.patches import Rectangle
+    return sum(p.get_height() for p in ax.patches if isinstance(p, Rectangle))
+
+
+def same_shape(a, b):
+    """True if two 0/1 grids draw the same pattern, ignoring position, rotation and mirroring."""
+    a = _crop(np.array(a) > 0)
+    b = _crop(np.array(b) > 0)
+    for k in range(4):
+        r = np.rot90(b, k)
+        for candidate in (r, np.fliplr(r)):
+            if candidate.shape == a.shape and (candidate == a).all():
+                return True
+    return False
+
+
+def _crop(grid):
+    if not grid.any():
+        return grid[:0, :0]
+    rows = np.where(grid.any(axis=1))[0]
+    cols = np.where(grid.any(axis=0))[0]
+    return grid[rows[0]:rows[-1] + 1, cols[0]:cols[-1] + 1]
 
 
 # -- small utilities ------------------------------------------------------

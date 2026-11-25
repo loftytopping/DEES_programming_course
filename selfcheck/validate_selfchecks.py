@@ -10,11 +10,14 @@ student notebook and runs them with a real Jupyter kernel:
 
 Run from the repository root:
 
-    pip install nbclient ipykernel numpy matplotlib
-    python selfcheck/validate_selfchecks.py
+    pip install nbclient ipykernel numpy matplotlib scipy pandas seaborn \\
+        scikit-learn cartopy geopandas contextily
+    python selfcheck/validate_selfchecks.py        # all practicals
+    python selfcheck/validate_selfchecks.py 4 5    # just some of them
 """
 
 import difflib
+import re
 import sys
 from pathlib import Path
 
@@ -22,7 +25,7 @@ import nbformat
 from nbclient import NotebookClient
 
 ROOT = Path(__file__).resolve().parent.parent
-PRACTICALS = [1, 2, 3]
+PRACTICALS = [int(a) for a in sys.argv[1:]] or list(range(1, 10))
 PASS_TEXT = "all checks passed"
 
 
@@ -46,20 +49,40 @@ def exercise_cells(nb):
 
 
 def solution_cells(student, solution):
-    """Pair each exercise cell with the most similar code cell in the solution notebook."""
+    """Pair each exercise cell with its cell in the solution notebook.
+
+    First we look for the markdown cell just above the exercise (the task
+    text) in the solution notebook and take the code cell in the same position
+    after it. If the text differs, we fall back to the most similar code cell
+    that comes after the previous match.
+    """
     pairs = []
-    candidates = [c for c in solution.cells if c.cell_type == "code"]
+    last = -1
     for i in exercise_cells(student):
-        best = max(candidates, key=lambda c: difflib.SequenceMatcher(
-            None, student.cells[i].source, c.source).ratio())
-        pairs.append((i, best.source))
+        m = i - 1
+        while m >= 0 and student.cells[m].cell_type != "markdown":
+            m -= 1
+        nth = sum(1 for c in student.cells[m + 1:i] if c.cell_type == "code" and not is_check(c))
+        j = None
+        for k, c in enumerate(solution.cells):
+            if k > last and c.cell_type == "markdown" and c.source.strip() == student.cells[m].source.strip():
+                codes = [n for n in range(k + 1, len(solution.cells)) if solution.cells[n].cell_type == "code"]
+                if len(codes) > nth:
+                    j = codes[nth]
+                break
+        if j is None:
+            later = [n for n, c in enumerate(solution.cells) if n > last and c.cell_type == "code"]
+            j = max(later, key=lambda n: difflib.SequenceMatcher(
+                None, student.cells[i].source, solution.cells[n].source).ratio())
+        pairs.append((i, solution.cells[j].source))
+        last = j
     return pairs
 
 
 def run(nb):
-    NotebookClient(nb, timeout=300, kernel_name="python3", allow_errors=True,
+    NotebookClient(nb, timeout=1200, kernel_name="python3", allow_errors=True,
                    resources={"metadata": {"path": str(ROOT)}}).execute()
-    return [(n + 1, text_of(c)) for n, c in enumerate([c for c in nb.cells if is_check(c)])]
+    return [(re.search(r"exercise(\w+)", c.source).group(1), text_of(c)) for c in nb.cells if is_check(c)]
 
 
 def main():
