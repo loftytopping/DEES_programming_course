@@ -1,0 +1,56 @@
+name: Test solution notebooks
+
+# Runs every notebook in solutions/ from top to bottom using the course
+# environment.yml, so a library update that breaks a practical is caught
+# before students hit it.
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+  workflow_dispatch:
+  schedule:
+    # Mondays 06:00 UTC, to catch breakage from new package releases
+    - cron: "0 6 * * 1"
+
+jobs:
+  execute-notebooks:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    defaults:
+      run:
+        shell: bash -el {0}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: conda-incubator/setup-miniconda@v3
+        with:
+          miniforge-version: latest
+          environment-file: environment.yml
+          activate-environment: DEES_python
+
+      - name: Register kernel
+        run: python -m ipykernel install --user --name python3
+
+      - name: Execute notebooks
+        working-directory: solutions
+        run: |
+          failed=()
+          for nb in *.ipynb; do
+            echo "::group::$nb"
+            if jupyter nbconvert --to notebook --execute \
+                 --ExecutePreprocessor.kernel_name=python3 \
+                 --ExecutePreprocessor.timeout=900 \
+                 --output-dir "$RUNNER_TEMP/executed" "$nb"; then
+              echo "::endgroup::"
+              echo "PASS $nb"
+            else
+              echo "::endgroup::"
+              echo "::error file=solutions/$nb::$nb failed to execute"
+              failed+=("$nb")
+            fi
+          done
+          if [ ${#failed[@]} -gt 0 ]; then
+            echo "Failed notebooks: ${failed[*]}"
+            exit 1
+          fi
