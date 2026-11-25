@@ -65,7 +65,7 @@ These are the commands for switching on/off this new virtual environment. Let's 
 
 > conda activate DEES_python
 
-In the command prompt, you will see the name (DEES_programming_env) replace (base). Now we can start an interactive Jupyer notebook session. Still within the project folder, type the following:
+In the command prompt, you will see the name (DEES_python) replace (base). Now we can start an interactive Jupyer notebook session. Still within the project folder, type the following:
 
 > jupyter notebook
 
