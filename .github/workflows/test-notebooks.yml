@@ -1,8 +1,8 @@
 name: Test solution notebooks
 
-# Runs every notebook in solutions/ from top to bottom using the course
-# environment.yml, so a library update that breaks a practical is caught
-# before students hit it.
+# Runs every practical from top to bottom with its solutions filled in, using
+# the course environment.yml, so a library update that breaks a practical is
+# caught before students hit it. The "Check your answer" cells must also pass.
 
 on:
   push:
@@ -32,25 +32,7 @@ jobs:
       - name: Register kernel
         run: python -m ipykernel install --user --name python3
 
-      - name: Execute notebooks
-        working-directory: solutions
-        run: |
-          failed=()
-          for nb in *.ipynb; do
-            echo "::group::$nb"
-            if jupyter nbconvert --to notebook --execute \
-                 --ExecutePreprocessor.kernel_name=python3 \
-                 --ExecutePreprocessor.timeout=900 \
-                 --output-dir "$RUNNER_TEMP/executed" "$nb"; then
-              echo "::endgroup::"
-              echo "PASS $nb"
-            else
-              echo "::endgroup::"
-              echo "::error file=solutions/$nb::$nb failed to execute"
-              failed+=("$nb")
-            fi
-          done
-          if [ ${#failed[@]} -gt 0 ]; then
-            echo "Failed notebooks: ${failed[*]}"
-            exit 1
-          fi
+      - name: Run every practical with its solutions
+        # Pastes the code from each "Show solution" dropdown into its exercise
+        # cell and runs the notebook. See selfcheck/run_solutions.py.
+        run: python selfcheck/run_solutions.py
