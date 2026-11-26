@@ -95,9 +95,6 @@ If you do not, or cannot, run Python from your own machine we have provided the 
     ├── data                    # Contains data used in Pandas examples 
     ├── images                  # Contains images for all notebooks
     ├── selfcheck               # 'Check your answer' cells and maintainer scripts that test the solutions
-    ├── solutions               # Old full solution notebooks (now replaced by 'Show solution' dropdowns in each practical)
-    |------ data                  # Data used in solutions notebooks
-    |------ images                # images used in solutions notebooks
     ├── Practical 1.            # Individual notebook practicals
     ├── Practical 2. ....
     ├── LICENSE
