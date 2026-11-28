@@ -79,17 +79,25 @@ def exercise4a():
 
 
 def exercise4b():
-    """Exercise 4b: list of all 22 feature columns."""
+    """Exercise 4b: build the list of the 22 MFCC feature columns with a loop."""
     with Checker("Practical 9, Exercise 4b") as c:
-        cols = list(c.need("column_list"))
+        cols = list(c.need("mfcc_cols"))
         frogs = c.need("data_frogs")
-        bad = [x for x in cols if x not in frogs.columns]
-        if bad:
-            c.fail(f"These names are not columns in data_frogs: {bad[:3]}",
-                   "Copy names exactly from data_frogs.columns. Note the space in 'MFCCs_ 1' to 'MFCCs_ 9'.")
+        if not cols:
+            c.fail("`mfcc_cols` is still empty.",
+                   "Inside the loop, use: if name.startswith('MFCC'): mfcc_cols.append(name)")
+            c.stop()
+        bad = [x for x in cols if x not in MFCC]
+        c.check(not bad, "Every name in `mfcc_cols` is an MFCC feature column",
+                f"These names should not be in `mfcc_cols`: {bad[:3]}",
+                "Only add a name when name.startswith('MFCC') is True.")
         missing = [x for x in MFCC if x not in cols]
-        c.check(not missing, "`column_list` has all 22 MFCC features",
-                f"`column_list` is missing {len(missing)} of the 22 MFCC features, e.g. {missing[:2]}.")
+        c.check(not missing, "`mfcc_cols` has all 22 MFCC features",
+                f"`mfcc_cols` is missing {len(missing)} of the 22 MFCC features, e.g. {missing[:2]}.",
+                "Loop over every name in data_frogs.columns, not just some of them.")
+        c.check(len(cols) == len(set(cols)), "No feature appears twice",
+                "Some features appear more than once in `mfcc_cols`.",
+                "Run the cell again from the top, so mfcc_cols starts as an empty list.")
 
 
 def _pca(frogs):
@@ -119,9 +127,9 @@ def exercise5():
                 "Standardise first with scaler = StandardScaler(), then PCA(n_components=2).")
 
 
-def exercise6():
-    """Exercise 6: K-means on Genus without PCA."""
-    with Checker("Practical 9, Exercise 6") as c:
+def exercise6a():
+    """Exercise 6a: K-means on Genus without PCA."""
+    with Checker("Practical 9, Exercise 6a") as c:
         frogs = c.need("data_frogs")
         target = c.need("target")
         c.check(hasattr(target, "equals") and target.equals(frogs["Genus"]), "`target` is the 'Genus' column",
@@ -136,6 +144,29 @@ def exercise6():
                 "Without PCA, fit on the standardised features: kmeans.fit_predict(features_scaled)")
         acc = c.need("accuracy")
         print(f"   Your K-means accuracy is {float(acc):.2f}. Is it close to 80%?")
+
+
+def exercise6b():
+    """Exercise 6b: accuracy for 2 to 12 clusters."""
+    with Checker("Practical 9, Exercise 6b") as c:
+        ks = list(c.need("k_values"))
+        accs = [float(a) for a in c.need("accuracies")]
+        if len(accs) != len(ks):
+            c.fail(f"`accuracies` has {len(accs)} values, but there are {len(ks)} values of k.",
+                   "Append one accuracy inside the loop, and run the whole cell from the top.")
+            c.stop()
+        c.ok(f"There is one accuracy for each of the {len(ks)} values of k")
+        model = c.need("kmeans_k")
+        c.check(getattr(model, "n_clusters", None) == ks[-1], "Each K-means uses k clusters",
+                f"The last K-means used {getattr(model, 'n_clusters', '?')} clusters, but the last k is {ks[-1]}.",
+                "Use KMeans(n_clusters=k, random_state=42)")
+        c.check(getattr(model, "n_features_in_", None) == len(MFCC),
+                "K-means was fitted on the 22 standardised features",
+                f"K-means was fitted on {getattr(model, 'n_features_in_', '?')} features, not 22.",
+                "Use kmeans_k.fit_predict(features_scaled), with features_scaled from Exercise 6a.")
+        c.check(accs[-1] > accs[0], "Accuracy rises as you add more clusters",
+                "The accuracy doesn't change with k as I expected.",
+                "Make sure the loop uses k, not a fixed number of clusters.")
 
 
 def exercise7():
@@ -155,3 +186,34 @@ def exercise7():
         acc = float(c.need("accuracy"))
         c.check(acc > 0.9, f"Accuracy is {acc:.2f}", f"Accuracy is only {acc:.2f}; I expected over 0.9.",
                 "Check you trained on X_train, y_train and predicted on X_test.")
+
+
+def exercise8():
+    """Exercise 8: Random Forest tested on unseen recordings."""
+    with Checker("Practical 9, Exercise 8") as c:
+        frogs = c.need("data_frogs")
+        train_idx = np.asarray(c.need("train_idx"))
+        test_idx = np.asarray(c.need("test_idx"))
+        rec = frogs["RecordID"].to_numpy()
+        shared = set(rec[train_idx]) & set(rec[test_idx])
+        c.check(not shared, "No recording is in both the training and test sets",
+                f"{len(shared)} recordings are in both the training and test sets.",
+                "Pass groups=groups to splitter.split, so whole recordings stay together.")
+        for name, idx in (("X_test_g", test_idx), ("y_train_g", train_idx), ("y_test_g", test_idx)):
+            val = c.need(name)
+            c.check(len(val) == len(idx), f"`{name}` has the right number of rows ({len(idx)})",
+                    f"`{name}` has {len(val)} rows, but I expected {len(idx)}.",
+                    "Pick the rows with .iloc[train_idx] or .iloc[test_idx].")
+        y_test_g = c.need("y_test_g")
+        c.check(set(np.unique(y_test_g)) <= set(frogs["Family"]), "The labels are family names",
+                "`y_test_g` doesn't hold family names.", "Use y.iloc[test_idx], where y is data_frogs['Family']")
+        model = c.need("rf_grouped")
+        c.check(hasattr(model, "estimators_") and getattr(model, "n_features_in_", None) == len(MFCC),
+                "The new Random Forest was trained on the 22 features",
+                "`rf_grouped` hasn't been trained on the 22 features yet.",
+                "Use rf_grouped = RandomForestClassifier(n_estimators=100, random_state=42), then rf_grouped.fit(X_train_g, y_train_g)")
+        acc = float(c.need("accuracy_grouped"))
+        expected = float(np.mean(model.predict(c.need("X_test_g")) == np.asarray(y_test_g)))
+        c.check(abs(acc - expected) < 1e-9, f"`accuracy_grouped` is {acc:.2f}",
+                f"`accuracy_grouped` is {acc:.2f}, but the model's accuracy on the test recordings is {expected:.2f}.",
+                "Use accuracy_score(y_test_g, rf_grouped.predict(X_test_g))")
